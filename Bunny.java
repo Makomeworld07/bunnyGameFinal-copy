@@ -1,8 +1,8 @@
 import ecs100.*;
 /**
- * Code has been taken from my books manager.
- * Support class for Cards.
- * A card contains an id, name, quantity, value, image.
+ * Code has been taken from my Pokemon project.
+ * Support class for Bunnys.
+ * A bunny has a name and an image.
  *
  * @author Korimako
  *
@@ -10,12 +10,8 @@ import ecs100.*;
 
 public class Bunny {
     // fields
-    private int id; // Each card assigned an id
-    private String name; // Name of each card
-    private int quantity; // Quant of each card
-    private int value; // $ value
-    private String image; // Image of card
-    static final String DEFAULT_IMAGE = "card.png"; // Set a default image
+    private String name = "Te Puna"; // Sets the bunny name to Te Puna
+    private String image = "card.png"; // Default image
 
     private int locX = 100; // Image x start position
     private int locY = 100; // Image y start position
@@ -28,35 +24,11 @@ public class Bunny {
      * This constructor sets default image to obj.
      * @param key, nm, auth, qty, img.
      */
-    public Bunny(int key, String nm, int val, int qty, String img)
+    public Bunny()
     {
-        id = key;
-        name = nm;
-        value = val;
-        quantity = qty;
-        if(img == null){
-            this.image = DEFAULT_IMAGE; // Add default img if user clicks cancel
-        }else{
-            this.image = img;
-        }
+        
     }
-
-    /**
-     * Sets default image to obj.
-     */
-    public Bunny(int key, String nm, int qty, int val)
-    {
-      this(key, nm, qty, val, DEFAULT_IMAGE);
-    }
-
-    /**
-     * Display pokemon card on GUI.
-     */
-    public void displayBunny() {
-  
-        UI.drawImage(this.image, locX, locY, WIDTH, HEIGHT);
-    }
-
+    
     /**
      * Getter for img location X.
      */
@@ -80,16 +52,19 @@ public class Bunny {
         double locaY = (double) locY;
         return locaY+HEIGHT;
     }
-
-    /**
-     * Getter for id.
-     * @return integer id number of card.
-     *
-     */
-    public int getId(){
-        return this.id;
+    
+    public void jump() {
+        UI.println("jumps");
     }
-
+    
+    public void feed() {
+        UI.println("fed");
+    }
+    
+    public void dig() {
+        UI.println("dug");
+    }
+    
     /**
      * Getter for name.
      * @return String card name.
@@ -97,24 +72,6 @@ public class Bunny {
      */
     public String getName(){
         return this.name;
-    }
-
-    /**
-     * Getter for value of card.
-     * @return int value of pokemon card.
-     *
-     */
-    public int getValue(){
-        return this.value;
-    }
-
-    /**
-     * Getter for quantity.
-     * @return integer with quantity of the obj card.
-     *
-     */
-    public int getQuantity(){
-        return this.quantity;
     }
 
     /**
