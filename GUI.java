@@ -9,23 +9,20 @@ import ecs100.*;
  */
 public class GUI{
     // field
-    private Bunnys bunnys;     //declare cards instance
-    private Bunny bunny;      //declare cards instance
-
+    private Game game;
     /**
      * Constructor for objects of class GUI.
      */
     public GUI()
     {
         // initialise instance variables
-        bunnys = new Bunnys();           //instantiate the cards
+        game = new Game();           //instantiate the cards
         
         // Set up GUI
         UI.initialise();
-        UI.addButton("", bunnys::printAllBunnys);
-        UI.addButton("Eat", bunnys::addBunny);
-        UI.addButton("Jump", bunnys::findBunny);
-        UI.addButton("Dig",bunnys::hideBunnys);
+        UI.addButton("Feed", game::feedBunny);
+        UI.addButton("Jump", game::jumpBunny);
+        UI.addButton("Dig",game::digBunny);
         UI.addButton("Quit", UI::quit);
     }
 
