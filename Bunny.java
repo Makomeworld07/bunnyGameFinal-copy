@@ -11,7 +11,8 @@ import ecs100.*;
 public class Bunny {
     // fields
     private String name = "Te Puna"; // Sets the bunny name to Te Puna
-    private String image = "card.png"; // Default image
+    private String image = DEFAULT_IMAGE; 
+    static final String DEFAULT_IMAGE = "bunnyPixelDefault.png"; // Set a default image
 
     private int locX = 100; // Image x start position
     private int locY = 100; // Image y start position
@@ -24,11 +25,19 @@ public class Bunny {
      * This constructor sets default image to obj.
      * @param key, nm, auth, qty, img.
      */
-    public Bunny()
-    {
-        
+   public Bunny() {
+        this.image = DEFAULT_IMAGE;
     }
     
+
+    /**
+         * Display image on GUI
+         */
+        public void displayBunny() {
+      
+         UI.drawImage(this.DEFAULT_IMAGE, locX, locY, WIDTH, HEIGHT);
+      }
+      
     /**
      * Getter for img location X.
      */

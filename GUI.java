@@ -17,7 +17,6 @@ public class GUI{
     {
         // initialise instance variables
         game = new Game();           //instantiate the cards
-        
         // Set up GUI
         UI.initialise();
         UI.addButton("Feed", game::feedBunny);

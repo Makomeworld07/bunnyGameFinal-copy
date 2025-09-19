@@ -9,20 +9,22 @@ public class Game {
     // Constructor
     public Game() {
         bunny = new Bunny(); // The bunny
+        bunny.displayBunny();
     }
     // Feed the bunny
     public void feedBunny() {
         bunny.feed();
         UI.println(" Reka"); 
+        bunny.displayBunny();
     }
-    
+
     public void jumpBunny() {
         bunny.jump();
-        UI.println("cool");
+        UI.println("jump");
     }
     
     public void digBunny() {
         bunny.dig();
-        UI.println("ka pai");
+        UI.println("ka pai. dirty");
     }
 }
