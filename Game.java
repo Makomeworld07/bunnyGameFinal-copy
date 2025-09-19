@@ -14,17 +14,18 @@ public class Game {
     // Feed the bunny
     public void feedBunny() {
         bunny.feed();
-        UI.println(" Reka"); 
+        UI.println("Whuuuu, reka rawa atu"); 
         bunny.displayBunny();
     }
 
     public void jumpBunny() {
         bunny.jump();
-        UI.println("jump");
+        UI.println("Ka rawe! Kua peke ā rāpeti");
     }
     
     public void digBunny() {
         bunny.dig();
-        UI.println("ka pai. dirty");
+        UI.println("Kei te kari ā rāpeti ki te māra");
+        UI.println("Auē! He paru ā rāpeti");
     }
 }

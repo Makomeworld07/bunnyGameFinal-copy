@@ -19,10 +19,10 @@ public class GUI{
         game = new Game();           //instantiate the cards
         // Set up GUI
         UI.initialise();
-        UI.addButton("Feed", game::feedBunny);
-        UI.addButton("Jump", game::jumpBunny);
-        UI.addButton("Dig",game::digBunny);
-        UI.addButton("Quit", UI::quit);
+        UI.addButton("E kai", game::feedBunny);
+        UI.addButton("E Peke", game::jumpBunny);
+        UI.addButton("E kari",game::digBunny);
+        UI.addButton("E puta", UI::quit);
     }
 
     /**
