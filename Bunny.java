@@ -12,13 +12,16 @@ public class Bunny {
     // fields
     private String name = "Te Puna"; // Sets the bunny name to Te Puna
     private String image = DEFAULT_IMAGE; 
-    static final String DEFAULT_IMAGE = "bunnyPixelDefault.png"; // Set a default image
-
-    private int locX = 100; // Image x start position
-    private int locY = 100; // Image y start position
+    static final String DEFAULT_IMAGE = "bunnyPixelDefault.png"; // Set as bunny default image
+    static final String DIG_IMAGE = "bunnyPixelDig.png"; // Bunny dig image
+    static final String HEART_IMAGE = "bunnyPixelHeart.png"; // Bunny heart image
+    static final String DIRTY_IMAGE = "bunnyPixelDirty.png"; // Bunny dirty image
+    
+    private int locX = 200;// Image x start position
+    private int locY = 150; // Image y start position
       
-    private static final double WIDTH = 100;
-    private static final double HEIGHT = 100;
+    private static final double WIDTH = 250;
+    private static final double HEIGHT = 250;
 
     /**
      * Constructor for obj class card.
@@ -34,59 +37,26 @@ public class Bunny {
          * Display image on GUI
          */
         public void displayBunny() {
-      
-         UI.drawImage(this.DEFAULT_IMAGE, locX, locY, WIDTH, HEIGHT);
+        UI.drawImage(this.image, locX, locY, WIDTH, HEIGHT);
       }
       
-    /**
-     * Getter for img location X.
-     */
-    public int getLeft(){
-        return locX;
-    }
-
     /**
      * Getter for img location Y.
      */
     public int getTop(){
     return locY;
     }
-
-    public double getRight(){
-        double locaX = (double) locX;
-        return locaX+WIDTH;
-    }
-
-    public double getBottom(){
-        double locaY = (double) locY;
-        return locaY+HEIGHT;
-    }
     
     public void jump() {
-        UI.println("jumps");
+        this.image = "bunnyPixelDefault.png";
     }
     
     public void feed() {
-        UI.println("fed");
+        this.image = "bunnyPixelHeart.png";
     }
     
     public void dig() {
-        UI.println("dug");
-    }
-    
-    /**
-     * Getter for name.
-     * @return String card name.
-     *
-     */
-    public String getName(){
-        return this.name;
+        this.image = "bunnyPixelDig.png";
     }
 
-    /**
-     * Getter for image.
-     */
-    public String getImage() {
-        return this.image;
-    }
 }

@@ -21,11 +21,13 @@ public class Game {
     public void jumpBunny() {
         bunny.jump();
         UI.println("Ka rawe! Kua peke ā rāpeti");
+        bunny.displayBunny();
     }
     
     public void digBunny() {
         bunny.dig();
         UI.println("Kei te kari ā rāpeti ki te māra");
         UI.println("Auē! He paru ā rāpeti");
+        bunny.displayBunny();
     }
 }
