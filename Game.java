@@ -24,6 +24,7 @@ public class Game {
     public void feedBunny() {
         bunny.feed();
         UI.println("Whuuuu, reka rawa atu"); 
+        UI.println("Ka rawe kua piki te hauora!");
         drawBackground();
         bunny.displayBunny();
     }
@@ -39,6 +40,7 @@ public class Game {
         bunny.dig();
         UI.println("Kei te kari ā rāpeti ki te māra");
         UI.println("Auē! He paru ā rāpeti");
+        UI.println("Ka taka to hauora! E kai ki te whakapiki!");
         drawBackground();
         bunny.displayBunny();
     }

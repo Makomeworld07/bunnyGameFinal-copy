@@ -11,6 +11,9 @@ import ecs100.*;
 public class Bunny {
     // fields
     private String name = "Te Puna"; // Sets the bunny name to Te Puna
+    
+    private int health = 50; // Sets health to 50
+    
     private String image = DEFAULT_IMAGE; 
     static final String DEFAULT_IMAGE = "bunnyPixelDefault.png"; // Set as bunny default image
     static final String DIG_IMAGE = "bunnyPixelDig.png"; // Bunny dig image
@@ -24,39 +27,32 @@ public class Bunny {
     private static final double HEIGHT = 250;
 
     /**
-     * Constructor for obj class card.
-     * This constructor sets default image to obj.
-     * @param key, nm, auth, qty, img.
+     * Constructor for bunny class
      */
    public Bunny() {
         this.image = DEFAULT_IMAGE;
     }
     
-
     /**
-         * Display image on GUI
+         * Display bunny on GUI
          */
         public void displayBunny() {
-        UI.drawImage(this.image, locX, locY, WIDTH, HEIGHT);
+        UI.drawImage(this.image, locX, locY, WIDTH, HEIGHT); // draws the bunny image
+        UI.println("Rapeti hauora: " + health); // Displays health
       }
       
-    /**
-     * Getter for img location Y.
-     */
-    public int getTop(){
-    return locY;
-    }
-    
     public void jump() {
-        this.image = "bunnyPixelDefault.png";
+        this.image = "bunnyPixelDefault.png"; // sets image
     }
     
     public void feed() {
-        this.image = "bunnyPixelHeart.png";
+        this.image = "bunnyPixelHeart.png"; // sets image
+        health += 10; // increase health
     }
     
     public void dig() {
-        this.image = "bunnyPixelDig.png";
+        this.image = "bunnyPixelDig.png"; // sets image
+        health -= 10; // decrease health
     }
 
 }
